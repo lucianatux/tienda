@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+    text-align: center;
+  }
+
+  .fixed-size-image {
+    width: 100%; /* O ajusta según tu necesidad */
+    height: 200px; /* Ajusta según tu necesidad */
+    object-fit: contain; /* O ajusta según tu necesidad */
+  }
+
+  a{
+    text-decoration: none;
+  }
+  

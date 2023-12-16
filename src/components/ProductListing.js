@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import ProductComponent from "./ProductComponent";
 import { useSelector, useDispatch } from "react-redux";
-import {setProducts} from '../redux/actions/productActions';
+import { setProducts } from "../redux/actions/productActions";
 
 const ProductListing = () => {
   const products = useSelector((state) => state.allProducts.products);
@@ -14,17 +14,19 @@ const ProductListing = () => {
       .catch((err) => {
         console.log("Err", err);
       });
-      dispatch(setProducts(response.data));
+    dispatch(setProducts(response.data));
   };
-  useEffect(()=>{
+  useEffect(() => {
     fetchProducts();
   }, []);
   console.log("products:", products);
 
   return (
-    <div className="ui grid container">
-      <h1>Product Listing</h1>
-      <ProductComponent />
+    <div class="container">
+      <div class="row">
+        <h1>Product Listing</h1>
+        <ProductComponent />
+      </div>
     </div>
   );
 };
